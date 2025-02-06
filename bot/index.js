@@ -1,13 +1,13 @@
-const { Telegraf } = require('telegraf');
-const { BOT_TOKEN, WEBAPP_URL } = require('./config');
+// const { Telegraf } = require('telegraf');
+// const { BOT_TOKEN, WEBAPP_URL } = require('./config');
 
 // if (!BOT_TOKEN) {
 //     throw new Error('BOT_TOKEN must be provided!');
 // }
 
 // const bot = new Telegraf(BOT_TOKEN);
-const { Bot } = require("grammy");
-const bot = new Bot(BOT_TOKEN);
+// const { Bot } = require("grammy");
+// const bot = new Bot(BOT_TOKEN);
 
 // Basic commands
 // bot.command('start', (ctx) => {
@@ -40,19 +40,19 @@ const bot = new Bot(BOT_TOKEN);
 //     });
 // });
 
-bot.on("callback_query:game_short_name", async (ctx) => {
-    await ctx.answerCallbackQuery({ url: "https://www.fusednfurious.xyz/game/index.html" });
-});
+// bot.on("callback_query:game_short_name", async (ctx) => {
+//     await ctx.answerCallbackQuery({ url: "https://www.fusednfurious.xyz/game/index.html" });
+// });
 
-// bot.on("message", (ctx) => ctx.reply("Got another message!"));
+// // bot.on("message", (ctx) => ctx.reply("Got another message!"));
 
-bot.command("start", async (ctx) => {
-    const chatId = ctx.from.id;
+// bot.command("start", async (ctx) => {
+//     const chatId = ctx.from.id;
 
-    await ctx.api.sendGame(chatId, "greentest");
-});
+//     await ctx.api.sendGame(chatId, "greentest");
+// });
 
-bot.start();
+// bot.start();
 // bot.launch().then(() => {
 //     console.log('Bot is running...');
 // });
