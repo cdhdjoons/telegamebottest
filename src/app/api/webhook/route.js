@@ -1,8 +1,10 @@
+// app/api/webhook/route.js
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
   try {
     const body = await req.json();
+    console.log("Received Webhook Body:", body);
 
     // Handle game callback query
     if (body.callback_query && body.callback_query.game_short_name) {
